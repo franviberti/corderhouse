@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header {
+    background-color: rgb(151, 62, 151);
+}
+.barra{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px 10px;
+}
+
+.menu ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.extras{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.extras > img{
+    width: 30px;
+}
+
+.redes {
+    width: 80px;
+    display: flex;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.redes a img{
+    height: 35px;
+}
+
+.logo a img{
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+.barra form input{
+    width: 700px;
+    padding: 8px 12px;
+    font-size: 20px;
+}
+
+.menu{
+    padding: 10px 40px 20px;
+}
+
+.logo a{
+    font-family: 'Dancing Script', cursive;
+    color: black;
+}
+
+.menu ul li a{
+    color: black;
+    font-size: 20px;
+}
+
+.oferta{
+    text-align: center;
+    margin-top: 25px;
+}
+
+
+.container-ofertas{
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    margin-top: 25px;
+}
+
+.destacados{
+    text-align: center;
+    margin-top: 25px;
+}
+
+
+.container-destacados{
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    margin-top: 25px;
+    margin-bottom: 75px;
+}
+
+.footer{
+    text-align: center;
+}
