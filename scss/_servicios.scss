@@ -1,0 +1,29 @@
+/* SERVICIOS */
+
+
+
+.servicios {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+.container-servicios {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 1fr 1fr 1fr 1fr; */
+    gap: 30px;
+}
+
+.servicio > img {
+    /* aspect-ratio: 1; */
+    width: 30%;
+    object-fit: cover;
+    /* border: 1px solid black; */
+}
+
+.servicios > h2 {
+    margin-bottom: 40px;
+}
+

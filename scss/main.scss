@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+@import "sobre-mondo-cane";
+@import "productos";
+@import "servicios";
+@import "contacto";
+
+$color-violeta: rgb(151, 62, 151);
+$color-footer: rgb(61, 58, 58);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* INDEX */
+
+
+
+body{
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+body ul {
+    margin: 0;
+    padding: 0;
+}
+
+body h1 {
+    margin: 0;
+}
+
+body input {
+    line-height: 1;
+    font-weight: 100;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body hr {
+    margin: 0;
+    opacity: 1;
+    border: none;
+    border-top: 1px solid #000;
+}
+
+body p {
+    margin: 0;
+}
+
+h2 {
+    color: $color-violeta;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header {
+    background-color: $color-violeta;
+    margin-bottom: 30px;
+}
+
+.logo > img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.barra{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px 10px;
+    gap: 20px;
+}
+
+.menu ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.extras{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.extras > img{
+    width: 30px;
+}
+
+.redes {
+    width: 80px;
+    display: flex;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.redes a img{
+    height: 35px;
+}
+
+.logo {
+    font-size: 18px;
+}
+
+.logo a img {
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+.logo-mail > p {
+    word-break: break-all;
+}
+
+
+
+/* BARRA PARA MOBILE */
+
+
+
+.barra-mobile {
+    display: none;
+    padding: 10px 0;
+}
+
+.barra-mobile > div {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.barra-mobile .logo img {
+    width: 50px;
+}
+
+.barra-mobile .extras {
+    width: 130px;
+}
+
+.form-buscador {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-buscador input{
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 20px;
+}
+
+.menu{
+    padding: 10px 40px 20px;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 30px;
+}
+
+.logo a{
+    font-family: 'Dancing Script', cursive;
+    color: black;
+}
+
+.menu ul li a{
+    color: black;
+    font-size: 20px;
+}
+
+.oferta{
+    text-align: center;
+    margin-top: 25px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: normal 1 izq-der 1s;
+    animation-timing-function: ease;
+
+    @keyframes izq-der {
+        0% {
+            transform: translateX(-50%);
+            opacity: .3;
+        }
+
+        100% {
+            transform: translateX(0%);
+        }
+    }
+}
+
+
+.container-ofertas{
+    display: flex;
+    justify-content: center;
+    gap: 50px 150px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.item-oferta {
+    width: 90%;
+    max-width: 140px;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.07);
+        }
+    }
+}
+
+
+.destacados{
+    text-align: center;
+    margin-top: 25px;
+    animation: normal 1 der-izq 1s;
+    animation-timing-function: ease;
+
+    @keyframes der-izq {
+        0% {
+            transform: translateX(50%);
+            opacity: .3;
+        }
+
+        100% {
+            transform: translateX(0%);
+        }
+    }
+}
+
+
+.container-destacados{
+    display: flex;
+    justify-content: center;
+    gap: 50px 150px;
+    margin-top: 25px;
+    margin-bottom: 75px;
+    flex-wrap: wrap;
+}
+
+.item-destacado {
+    @extend .item-oferta
+}
+
+.footer{
+    text-align: center;
+    background-color: $color-footer;
+    padding: 15px;
+
+    a {
+        color: whitesmoke;
+    }
+}
+
+
+@media screen and (max-width:1080px) {
+    .form-contacto {
+        grid-template-columns: auto;
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width:610px) {
+    .imagenes {
+        grid-template-columns: 1fr 1fr;
+        width: 60%;
+    }
+    .barra {
+        display: none;
+    }
+    .barra-mobile {
+        display: block;
+    }
+    .container-servicios {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:530px) {
+    .logo > p {
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (max-width:400px) {
+    .menu > ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .imagenes {
+        grid-template-columns:auto;
+    }
+    .container-servicios {
+        grid-template-columns: 1fr;
+    }
+}
+
+    
